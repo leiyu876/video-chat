@@ -16,7 +16,7 @@
 
                     {{ __('You are logged in!') }}
 
-                    <a class="btn btn-primary" href="{{ route('login') }}">Go Livestream</a>
+                    <a class="btn btn-primary" href="{{ route('livestream') }}">Go Livestream</a>
                 </div>
             </div>
         </div>

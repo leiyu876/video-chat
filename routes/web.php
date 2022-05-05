@@ -29,5 +29,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('video_chat', [App\Http\Controllers\VideoChatController::class, 'index']);
     Route::post('auth/video_chat', [App\Http\Controllers\VideoChatController::class, 'auth']);
 
-    Route::get('livestream', [App\Http\Controllers\LiveStreamController::class, 'index']);
+    Route::get('livestream', [App\Http\Controllers\LiveStreamController::class, 'index'])->name('livestream');
+
+    Route::resources([
+        'groups' => App\Http\Controllers\GroupController::class,
+        'conversations' => App\Http\Controllers\ConversationController::class,
+    ]);
 });
